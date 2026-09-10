@@ -49,24 +49,29 @@
           <div class="form-grid">
             <div class="form-group full">
               <label for="jobref">Job Reference Number <span aria-hidden="true">*</span></label>
-              <input id="jobref" name="jobref" type="text" required>
-
+              <input id="jobref" name="jobref" type="text" required maxlength="6" pattern="[A-Za-z0-9]{6}"
+                placeholder="e.g. FW1001" aria-describedby="jobref-help">
+              <p class="help-text" id="jobref-help">Exactly six alphanumeric characters. Valid FABWEB references are
+                FW1001, FW1002, FW1003 and FW1004.</p>
             </div>
 
             <div class="form-group">
               <label for="firstname">First Name <span aria-hidden="true">*</span></label>
-              <input id="firstname" name="firstname" type="text" required>
+              <input id="firstname" name="firstname" type="text" required maxlength="20" pattern="[A-Za-z]{1,20}"
+                autocomplete="given-name" title="Use alphabetic characters only, maximum 20 characters.">
             </div>
 
             <div class="form-group">
               <label for="lastname">Last Name <span aria-hidden="true">*</span></label>
-              <input id="lastname" name="lastname" type="text" required>
+              <input id="lastname" name="lastname" type="text" required maxlength="20" pattern="[A-Za-z]{1,20}"
+                autocomplete="family-name" title="Use alphabetic characters only, maximum 20 characters.">
             </div>
 
             <div class="form-group">
               <label for="dob">Date of Birth <span aria-hidden="true">*</span></label>
-              <input id="dob" name="dob" type="text" required>
-
+              <input id="dob" name="dob" type="text" required placeholder="dd/mm/yyyy"
+                pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" aria-describedby="dob-help">
+              <p class="help-text" id="dob-help">Enter the date in dd/mm/yyyy format.</p>
             </div>
 
             <fieldset class="form-group">
@@ -80,17 +85,17 @@
 
             <div class="form-group full">
               <label for="street">Street Address <span aria-hidden="true">*</span></label>
-              <input id="street" name="street" type="text" required>
+              <input id="street" name="street" type="text" required maxlength="40" autocomplete="street-address">
             </div>
 
             <div class="form-group">
               <label for="suburb">Suburb/Town <span aria-hidden="true">*</span></label>
-              <input id="suburb" name="suburb" type="text" required>
+              <input id="suburb" name="suburb" type="text" required maxlength="40" autocomplete="address-level2">
             </div>
 
             <div class="form-group">
               <label for="state">State/Territory <span aria-hidden="true">*</span></label>
-              <select id="state" name="state" required>
+              <select id="state" name="state" required autocomplete="address-level1">
                 <option value="">Select state or territory</option>
                 <option value="VIC">VIC</option>
                 <option value="NSW">NSW</option>
@@ -105,18 +110,20 @@
 
             <div class="form-group">
               <label for="postcode">Postcode <span aria-hidden="true">*</span></label>
-              <input id="postcode" name="postcode" type="text" required>
+              <input id="postcode" name="postcode" type="text" required maxlength="4" pattern="[0-9]{4}"
+                inputmode="numeric" autocomplete="postal-code" title="Enter exactly four digits.">
             </div>
 
             <div class="form-group">
               <label for="email">Email <span aria-hidden="true">*</span></label>
-              <input id="email" name="email" type="email" required>
+              <input id="email" name="email" type="email" required autocomplete="email">
             </div>
 
             <div class="form-group">
               <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
-              <input id="phone" name="phone" type="tel" required>
-
+              <input id="phone" name="phone" type="tel" required pattern="[0-9]{8,12}" inputmode="numeric"
+                autocomplete="tel" aria-describedby="phone-help">
+              <p class="help-text" id="phone-help">Enter 8–12 digits with no spaces.</p>
             </div>
             <fieldset class="form-group full">
               <legend>Skill List <span aria-hidden="true">*</span></legend>
