@@ -8,6 +8,13 @@
   <title>Apply | FABWEB Cybersecurity Services</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/layout.css">
+  <style>
+    /* Embedded CSS demonstration required by the assessment. */
+    .form-shell h2 {
+      border-left: 5px solid #1677FF;
+      padding-left: 0.75rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -32,7 +39,7 @@
   <main id="main-content">
     <section class="page-banner">
       <div class="container">
-        <p class="eyebrow">Career Application</p>
+        <p class="eyebrow" style="letter-spacing: 0.1em;">Career Application</p>
         <h1>Apply to Join FABWEB</h1>
         <p>Complete the form below using the six-character reference from the position description.</p>
       </div>
@@ -127,14 +134,43 @@
             </div>
             <fieldset class="form-group full">
               <legend>Skill List <span aria-hidden="true">*</span></legend>
-              <label class="choice"><input type="checkbox" name="skills[]" value="cybersecurity-fundamentals" required>
-                Cybersecurity Fundamentals</label>
+              <p class="help-text">Select the skills that apply to you. Cybersecurity Fundamentals is required for this
+                HTML-only demonstration.</p>
+              <div class="checkbox-grid">
+                <label class="choice"><input type="checkbox" name="skills[]" value="cybersecurity-fundamentals"
+                    required> Cybersecurity Fundamentals</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="network-security"> Network
+                  Security</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="incident-response"> Incident
+                  Response</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="siem"> SIEM / Security
+                  Monitoring</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="web-security"> Web Security</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="penetration-testing"> Penetration
+                  Testing</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="cloud-security"> Cloud
+                  Security</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="linux"> Linux</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="scripting"> Python /
+                  Scripting</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="risk-management"> Risk
+                  Management</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="security-awareness"> Security
+                  Awareness</label>
+                <label class="choice"><input type="checkbox" name="skills[]" value="technical-documentation"> Technical
+                  Documentation</label>
+              </div>
             </fieldset>
 
             <div class="form-group full">
               <label for="other-skills">Other Skills</label>
-              <textarea id="other-skills" name="other_skills"></textarea>
+              <textarea id="other-skills" name="other_skills"
+                placeholder="List any other relevant skills, certifications or experience."></textarea>
             </div>
+          </div>
+          <div class="submit-row">
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Clear Form">
           </div>
         </form>
       </div>
