@@ -7,6 +7,10 @@
   <title>FABWEB Cybersecurity Services | Home</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/layout.css">
+  <style>
+    /* Embedded CSS demonstration required by the assessment. */
+    .home-highlight { border-top: 4px solid #22D3EE; }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -28,10 +32,29 @@
   </header>
 
   <main id="main-content">
-    <section class="section">
-      <div class="container">
-        <h1>FABWEB Cybersecurity Services</h1>
-        <p>Secure the Web. Protect What Matters.</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow" style="letter-spacing: 0.1em;">Melbourne Cybersecurity Careers</p>
+          <h1 id="hero-title">Secure the Web.<br>Protect What Matters.</h1>
+          <p>FABWEB Cybersecurity Services helps organisations protect websites, cloud platforms, networks and digital services through practical, responsible and accessible security solutions.</p>
+
+          <div class="hero-actions">
+            <a class="button" href="jobs.html">Explore Open Roles</a>
+            <a class="button secondary" href="apply.html">Apply Now</a>
+          </div>
+
+          <div class="stats" aria-label="FABWEB recruitment highlights">
+            <div class="stat"><strong>4</strong> Open Positions</div>
+            <div class="stat"><strong>7</strong> Security Services</div>
+            <div class="stat"><strong>Hybrid</strong> Melbourne Roles</div>
+            <div class="stat"><strong>Security</strong> First Culture</div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/hero-cybersecurity.svg" alt="Cybersecurity monitor showing a shield and connected security nodes">
+        </div>
       </div>
     </section>
   </main>
