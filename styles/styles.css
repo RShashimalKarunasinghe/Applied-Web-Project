@@ -255,7 +255,74 @@ tr:last-child td {
 /* =========================================================
    4. APPLY.HTML ONLY
    ========================================================= */
+.form-intro {
+    background: #EEF5FB;
+    border-left: 4px solid var(--blue);
+}
 
+label,
+legend {
+    font-weight: 700;
+    color: var(--navy);
+}
+
+input,
+select,
+textarea {
+    border: 1px solid #8898AA;
+    border-radius: 0.4rem;
+    background: var(--white);
+    color: var(--text);
+    font: inherit;
+}
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: 0.55rem;
+}
+
+.choice {
+    font-weight: 400;
+    color: var(--text);
+}
+
+.help-text {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.required-note {
+    color: #8B1E1E;
+    font-weight: 700;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    border-radius: 0.45rem;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    border: 2px solid var(--blue);
+    background: var(--blue);
+    color: var(--white);
+}
+
+input[type="reset"] {
+    border: 2px solid var(--navy);
+    background: var(--white);
+    color: var(--navy);
+}
+
+input[type="submit"]:hover {
+    background: #0D5FCF;
+}
+
+input[type="reset"]:hover {
+    background: #EEF5FB;
+}
 
 /* =========================================================
    5. ABOUT.HTML ONLY
