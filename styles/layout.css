@@ -1,24 +1,255 @@
 /*
   FABWEB Cybersecurity Services — layout.css
-  Layout styles: sizing, spacing, positioning, Grid/Flexbox and responsive rules.
+  LAYOUT STYLESHEET: sizing, spacing, positioning, Grid/Flexbox and responsive layout.
 */
 
 /* =========================================================
    1. GENERAL
    ========================================================= */
+:root {
+    --max-width: 1180px;
+}
 
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand img {
+    width: 44px;
+    height: 44px;
+}
+
+.brand-text {
+    display: grid;
+}
+
+.brand-text small {
+    margin-top: 0.18rem;
+}
+
+.primary-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-nav a {
+    display: block;
+    padding: 0.65rem 0.9rem;
+}
+
+main {
+    min-height: 60vh;
+}
+
+.section {
+    padding-block: 4rem;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 2rem;
+}
+
+.section-heading h2,
+.section h2 {
+    margin-top: 0;
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+}
+
+.page-banner {
+    padding-block: 4rem;
+}
+
+.page-banner h1 {
+    margin: 0;
+}
+
+.page-banner p {
+    max-width: 70ch;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.78rem 1.15rem;
+}
+
+.card {
+    padding: 1.35rem;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p:last-child,
+.card ul:last-child {
+    margin-bottom: 0;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+}
+
+caption {
+    padding: 1rem;
+}
+
+th,
+td {
+    padding: 0.9rem 1rem;
+}
+
+.site-footer {
+    padding-block: 2.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr;
+    gap: 2rem;
+}
+
+.site-footer ul {
+    padding-left: 1.1rem;
+}
+
+.footer-note {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+}
 
 /* =========================================================
    2. INDEX.HTML ONLY
    ========================================================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
 
+.hero::before,
+.hero::after {
+    position: absolute;
+    pointer-events: none;
+}
 
+.hero::before {
+    width: 420px;
+    height: 420px;
+    right: -150px;
+    top: -170px;
+}
+
+.hero::after {
+    width: 280px;
+    height: 280px;
+    right: 50px;
+    bottom: -190px;
+}
+
+.hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    min-height: 560px;
+    padding-block: 4rem;
+}
+
+.hero h1 {
+    margin: 0;
+}
+
+.hero p {
+    max-width: 62ch;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+}
+
+.hero-visual {
+    justify-self: center;
+    max-width: 440px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.stat {
+    padding: 1rem;
+}
+
+.stat strong {
+    display: block;
+}
+
+.acknowledgement {
+    padding: 1.35rem 1.5rem;
+}
 
 /* =========================================================
    3. JOBS.HTML ONLY
    ========================================================= */
-
 
 
 /* =========================================================
@@ -26,9 +257,61 @@
    ========================================================= */
 
 
-
 /* =========================================================
    5. ABOUT.HTML ONLY
    ========================================================= */
 
 
+@media (max-width: 900px) {
+    .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-block: 0.8rem;
+    }
+
+    .site-header {
+        position: static;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .cards,
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: min(100% - 1.25rem, var(--max-width));
+    }
+
+    .primary-nav ul {
+        gap: 0.15rem;
+    }
+
+    .primary-nav a {
+        padding: 0.55rem 0.65rem;
+    }
+
+    .section,
+    .page-banner {
+        padding-block: 2.5rem;
+    }
+
+    .hero-grid {
+        padding-block: 2.5rem;
+    }
+
+    .cards,
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
