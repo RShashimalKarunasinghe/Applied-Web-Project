@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/layout.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -30,8 +32,104 @@
   <main id="main-content">
     <section class="page-banner">
       <div class="container">
-        <h1>Apply to FABWEB</h1>
-        <p>The application form will be added in a later development commit.</p>
+        <p class="eyebrow">Career Application</p>
+        <h1>Apply to Join FABWEB</h1>
+        <p>Complete the form below using the six-character reference from the position description.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container form-shell">
+        <div class="form-intro">
+          <h2>Application Form</h2>
+          <p><span class="required-note">Required:</span> all fields except Other Skills must be completed.</p>
+        </div>
+
+        <form class="application-form" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="jobref">Job Reference Number <span aria-hidden="true">*</span></label>
+              <input id="jobref" name="jobref" type="text" required>
+
+            </div>
+
+            <div class="form-group">
+              <label for="firstname">First Name <span aria-hidden="true">*</span></label>
+              <input id="firstname" name="firstname" type="text" required>
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Last Name <span aria-hidden="true">*</span></label>
+              <input id="lastname" name="lastname" type="text" required>
+            </div>
+
+            <div class="form-group">
+              <label for="dob">Date of Birth <span aria-hidden="true">*</span></label>
+              <input id="dob" name="dob" type="text" required>
+
+            </div>
+
+            <fieldset class="form-group">
+              <legend>Gender <span aria-hidden="true">*</span></legend>
+              <div class="radio-group">
+                <label class="choice"><input type="radio" name="gender" value="female" required> Female</label>
+                <label class="choice"><input type="radio" name="gender" value="male"> Male</label>
+                <label class="choice"><input type="radio" name="gender" value="other"> Another Identity</label>
+              </div>
+            </fieldset>
+
+            <div class="form-group full">
+              <label for="street">Street Address <span aria-hidden="true">*</span></label>
+              <input id="street" name="street" type="text" required>
+            </div>
+
+            <div class="form-group">
+              <label for="suburb">Suburb/Town <span aria-hidden="true">*</span></label>
+              <input id="suburb" name="suburb" type="text" required>
+            </div>
+
+            <div class="form-group">
+              <label for="state">State/Territory <span aria-hidden="true">*</span></label>
+              <select id="state" name="state" required>
+                <option value="">Select state or territory</option>
+                <option value="VIC">VIC</option>
+                <option value="NSW">NSW</option>
+                <option value="QLD">QLD</option>
+                <option value="NT">NT</option>
+                <option value="WA">WA</option>
+                <option value="SA">SA</option>
+                <option value="TAS">TAS</option>
+                <option value="ACT">ACT</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="postcode">Postcode <span aria-hidden="true">*</span></label>
+              <input id="postcode" name="postcode" type="text" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+              <input id="phone" name="phone" type="tel" required>
+
+            </div>
+            <fieldset class="form-group full">
+              <legend>Skill List <span aria-hidden="true">*</span></legend>
+              <label class="choice"><input type="checkbox" name="skills[]" value="cybersecurity-fundamentals" required>
+                Cybersecurity Fundamentals</label>
+            </fieldset>
+
+            <div class="form-group full">
+              <label for="other-skills">Other Skills</label>
+              <textarea id="other-skills" name="other_skills"></textarea>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -57,13 +155,16 @@
           <h3>Project Links</h3>
           <ul>
             <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub Repository</a></li>
-            <li><a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener">Jira Project Board</a></li>
+            <li><a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener">Jira Project Board</a>
+            </li>
           </ul>
         </section>
       </div>
 
-      <p class="footer-note">FABWEB Cybersecurity Services is a fictional company created for the COS10026 Applied Web Project. Replace the GitHub and Jira links with your team's actual project URLs before submission.</p>
+      <p class="footer-note">FABWEB Cybersecurity Services is a fictional company created for the COS10026 Applied Web
+        Project. Replace the GitHub and Jira links with your team's actual project URLs before submission.</p>
     </div>
   </footer>
 </body>
+
 </html>
