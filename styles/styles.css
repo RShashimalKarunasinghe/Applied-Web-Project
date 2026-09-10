@@ -328,6 +328,46 @@ input[type="reset"]:hover {
    5. ABOUT.HTML ONLY
    ========================================================= */
 
+.team-figure {
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--white);
+}
+
+.team-figure figcaption {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.definition-list dt {
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.student-id {
+    background: #E8F2FF;
+    border: 1px solid #AFCFFF;
+    color: #093C7D;
+    border-radius: 0.35rem;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.student-id:hover {
+    transform: translateY(-1px);
+    background: #D7E9FF;
+}
+
+blockquote {
+    border-left: 4px solid var(--cyan);
+    background: var(--light);
+}
+
+blockquote footer {
+    color: var(--muted);
+}
+
 :focus-visible {
     outline: 3px solid var(--focus);
     outline-offset: 3px;
