@@ -250,6 +250,46 @@ tr:last-child td {
 /* =========================================================
    3. JOBS.HTML ONLY
    ========================================================= */
+.job-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+}
+
+.job-card header {
+    background: #EEF5FB;
+    border-bottom: 1px solid var(--border);
+}
+
+.job-card header .eyebrow {
+    color: #0B5E6B;
+}
+
+.job-card h2,
+.job-card h3 {
+    color: var(--navy);
+}
+
+.job-meta {
+    list-style: none;
+}
+
+.job-meta strong {
+    color: var(--navy);
+}
+
+.job-aside {
+    background: #E8F8FB;
+    border: 1px solid #B9E8EF;
+    border-radius: 0.75rem;
+    border-top: 4px solid var(--teal);
+}
+
+.job-aside h2 {
+    color: var(--navy);
+    font-size: 1.4rem;
+}
 
 
 /* =========================================================
