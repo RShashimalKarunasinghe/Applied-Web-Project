@@ -250,7 +250,59 @@ td {
 /* =========================================================
    3. JOBS.HTML ONLY
    ========================================================= */
+.job-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 2rem;
+    align-items: start;
+}
 
+.job-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.job-card {
+    overflow: hidden;
+}
+
+.job-card header {
+    padding: 1.35rem 1.5rem;
+}
+
+.job-card header h2 {
+    margin-bottom: 0.35rem;
+}
+
+.job-body {
+    padding: 1.5rem;
+}
+
+.job-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem 1rem;
+    margin: 1rem 0 1.5rem;
+    padding: 0;
+}
+
+.job-card ol,
+.job-card ul {
+    padding-left: 1.3rem;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+}
+
+.job-aside {
+    position: sticky;
+    top: 96px;
+    padding: 1.25rem;
+}
 
 /* =========================================================
    4. APPLY.HTML ONLY
