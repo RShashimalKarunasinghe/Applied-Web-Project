@@ -334,10 +334,6 @@ input[type="reset"]:hover {
     background: var(--white);
 }
 
-#team-img {
-    size: 30%;
-}
-
 .team-figure figcaption {
     color: var(--muted);
     font-size: 0.95rem;
