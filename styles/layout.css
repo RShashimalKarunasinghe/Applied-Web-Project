@@ -433,6 +433,16 @@ input[type="reset"] {
     .stats {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Jobs page */
+    .job-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .job-aside {
+        position: static;
+        order: -1;
+    }
 }
 
 @media (max-width: 640px) {
