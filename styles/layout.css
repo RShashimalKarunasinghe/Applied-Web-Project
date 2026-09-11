@@ -477,6 +477,10 @@ input[type="reset"] {
     .checkbox-grid {
         grid-template-columns: 1fr;
     }
+
+    .job-meta {
+        grid-template-columns: 1fr;
+    }
 }
 
 
