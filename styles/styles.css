@@ -291,7 +291,19 @@ tr:last-child td {
     font-size: 1.4rem;
 }
 
+/* Improve colour contrast for Jobs page application buttons */
+.job-card .button,
+.job-aside .button {
+    background: #0D5FCF;
+    border-color: #0D5FCF;
+    color: #FFFFFF;
+}
 
+.job-card .button:hover,
+.job-aside .button:hover {
+    background: #0B4FAF;
+    border-color: #0B4FAF;
+}
 /* =========================================================
    4. APPLY.HTML ONLY
    ========================================================= */
